@@ -40,6 +40,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeLightColors" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmA-zJ-1WC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
