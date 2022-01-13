@@ -20,9 +20,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redLight.layer.cornerRadius = 90
-        yellowLight.layer.cornerRadius = 90
-        greenLight.layer.cornerRadius = 90
+        redLight.layer.cornerRadius = redLight.frame.size.height / 2
+        yellowLight.layer.cornerRadius = yellowLight.frame.size.height / 2
+        greenLight.layer.cornerRadius = greenLight.frame.size.height / 2
+        
         startButton.layer.cornerRadius = 10
         
         redLight.alpha = 0.3

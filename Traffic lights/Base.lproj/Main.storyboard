@@ -16,25 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KVA-Hh-D5M">
-                                <rect key="frame" x="117" y="56" width="180" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.79430106249999999" green="0.13769004460000001" blue="0.14542155000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KfE-kF-sAW">
-                                <rect key="frame" x="117" y="264" width="180" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vGN-Sp-e9B">
-                                <rect key="frame" x="117" y="473" width="180" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79w-IX-LDM">
-                                <rect key="frame" x="88" y="760" width="238" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="L79-jN-CbV">
+                                <rect key="frame" x="117" y="65" width="180" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVA-Hh-D5M">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        <color key="backgroundColor" red="0.79430106249999999" green="0.13769004460000001" blue="0.14542155000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KVA-Hh-D5M" secondAttribute="height" multiplier="1:1" id="9YZ-SP-3mV"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfE-kF-sAW">
+                                        <rect key="frame" x="0.0" y="200" width="180" height="180"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KfE-kF-sAW" secondAttribute="height" multiplier="1:1" id="TeR-8Q-Xa3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGN-Sp-e9B">
+                                        <rect key="frame" x="0.0" y="400" width="180" height="180"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vGN-Sp-e9B" secondAttribute="height" multiplier="1:1" id="Gmk-Xe-4z6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79w-IX-LDM">
+                                <rect key="frame" x="107" y="782" width="200" height="60"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Zq-0n-kpo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Y8t-RG-uH8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Start">
@@ -47,6 +61,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <constraints>
+                            <constraint firstItem="L79-jN-CbV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="7wS-v8-v7M"/>
+                            <constraint firstItem="L79-jN-CbV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TCx-c2-pYN"/>
+                            <constraint firstItem="L79-jN-CbV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="fOC-S7-Ki0"/>
+                            <constraint firstItem="79w-IX-LDM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rAV-Gc-GNT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="79w-IX-LDM" secondAttribute="bottom" constant="20" id="rtf-9Q-Y81"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLight" destination="vGN-Sp-e9B" id="F1F-Tm-OpC"/>
