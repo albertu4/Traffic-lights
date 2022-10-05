@@ -15,4 +15,6 @@ button, the red color should light up, and the title of the button should change
 "NEXT". The subsequent click on the "NEXT" button should change
 the active color to the next one in order.
 
+**What I used:** StackView, AspectRatio, viewDidLoad(), viewWillLayoutSubviews(), IBOutlet(), IBAction() 
+
 ![Simulator Screen Recording - iPhone 13 - 2022-10-05 at 13 45 07](https://user-images.githubusercontent.com/97275239/193990075-bb1645b3-c3ed-4180-868e-a8c43dbd0f64.gif)
